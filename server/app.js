@@ -1,10 +1,13 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const request = require("request");
 const express = require("express");
 const app = express();
 
-var port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
+const key = process.env.key;
 
-var key = "60de1139";
 // OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=60de1139
 //example: http://www.omdbapi.com/?apikey=60de1139&t=Mr+Nobody -> info
 //example: http://img.omdbapi.com/?apikey=[yourkey]& -> poster
